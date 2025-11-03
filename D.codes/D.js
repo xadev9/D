@@ -16,7 +16,7 @@ function updateCounter() {
     const seconds = diff %60;
 
     document.getElementById('counter').textContent = 
-        `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+        `${days} days ${hours} hours ${minutes} s ${seconds} seconds`;
 }
 
 // update every second now
@@ -31,5 +31,5 @@ updateCounter(); // initial call
 document.body.addEventListener('mousemove', (e) => {
     const x = e.clientX / window.innerWidth * 100;
     const y = e.clientY / window.innerHeight * 100;
-    document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #2c2c54, #1e1e2f)`;
+    document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #0c0c1eff, #000000ff)`;
 });

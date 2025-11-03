@@ -16,11 +16,6 @@ h1 {
     font-size: 3em;
 }
 
-h1:hover {
-    cursor: pointer;
-    color: #2c2c54;
-}
-
 h1:hover::before {
     display: inline;
     margin-right: 10px;
