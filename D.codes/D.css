@@ -7,13 +7,14 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    color: #ff6b6b;
+    color: #1c1c44ff;
     text-align: center;
     transition: background 0.2s ease;
 }
 
 h1 {
     font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h1:hover::before {
@@ -23,10 +24,46 @@ h1:hover::before {
 
 p {
     font-size: 1.2em;
-    color: #ff9f9f;
+    color: rgb(25, 25, 53);
 }
 
 #counter {
     font-size: 2em;
     margin-top: 20px;
+    position: relative;
+        display: inline-block;
+        font-size: 2em;
+        margin-top: 20px;
+        font-family: 'arial bold, sans-serif';
+        color: #1e1e2f;
+          -webkit-text-fill-color: #010000ff;
+          background: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          transition: color 0.9s cubic-bezier(.2,.8,.2,1),
+                      -webkit-text-fill-color 0.9s cubic-bezier(.2,.8,.2,1),
+                      background-size 0.9s cubic-bezier(.2,.8,.2,1),
+                      background-position 0.6s cubic-bezier(.2,.8,.2,1);
+          will-change: background-position, background-size;
+        --mx: 50%;
+        --my: 50%;
+        background-image: radial-gradient(circle at var(--mx) var(--my),
+            rgba(255,159,159,0.0) 10%,
+            rgba(255,107,107,0.0) 30%,
+            rgba(255,107,190,0.0) 60%,
+            rgba(255,107,207,0.0) 100%);
+        background-repeat: no-repeat;
+        background-size: 200% 200%;
+}
+
+#counter.hovering {
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        background-image: radial-gradient(circle at var(--mx) var(--my),
+            #d35050 10%,
+            #ff6b6b 20%,
+            hsla(0, 48%, 15%, 0.6) 40%,
+            rgba(0, 0, 0, 0) 80%);
+        background-size: 160% 160%;
+        background-position: var(--mx) var(--my);
 }
