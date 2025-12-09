@@ -1,5 +1,4 @@
-// ...existing code...
-const lastSeen = new Date('2025-08-27T12:22:00'); // change to your date
+const lastSeen = new Date('2025-08-27T18:14:00');
 
 function updateCounter() {
     const now = new Date();
@@ -24,7 +23,6 @@ function updateCounter() {
 setInterval(updateCounter, 1000);
 updateCounter(); // initial call
 
-// ...existing code...
 // update every minute
 setInterval(updateCounter, 60000);
 updateCounter(); // initial call
@@ -43,7 +41,7 @@ document.addEventListener('click', (e) => {
     ripple.style.top = `${e.clientY}px`;
     document.body.appendChild(ripple);
 
-    // Remove ripple after 3 seconds
+    // Remove ripple after 5 seconds
     setTimeout(() => {
         ripple.remove();
     }, 5000);
